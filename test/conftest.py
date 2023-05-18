@@ -21,7 +21,7 @@ driver = None
 
 @pytest.hookimpl(optionalhook=True)
 def pytest_html_report_title(report):
-    report.title = "Color Picker Application Selenium Testing 🚀"
+    report.title = "🎨 Color Picker Application Selenium Testing 🚀"
 
 @pytest.hookimpl(optionalhook=True)
 def pytest_html_results_summary(prefix, summary, postfix):
