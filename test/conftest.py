@@ -53,7 +53,7 @@ def pytest_runtest_makereport(item):
         file_name = report.nodeid.replace("::", "_").replace("/","_")+".png"
         project_root = dirname(dirname(__file__))    
         paths=f"{project_root}/screenshots/{file_name}"
-        time.sleep(7)
+        time.sleep(10)
         driver.save_screenshot(paths)
         screenshot = driver.get_screenshot_as_base64() # the hero
         extra.append(pytest_html.extras.image(screenshot, ''))
