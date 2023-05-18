@@ -18,6 +18,23 @@ import time
 
 driver = None
 
+@pytest.hookimpl(optionalhook=True)
+def pytest_html_report_title(report):
+    report.title = "Color Picker Application Selenium Testing 🚀"
+
+@pytest.hookimpl(optionalhook=True)
+def pytest_html_results_summary(prefix, summary, postfix):
+    ''' modifying the summary in pytest environment'''
+
+    from py.xml import html
+    prefix.extend([html.h3("Color Picker Screens")])
+    prefix.extend([html.p("We will take all screenshots of screen and also test there api's")])
+
+    summary.extend([html.h3("Adding summary message")])
+    summary.extend([html.p("All the reports and its images are been saved in local machine and also shown in reports")])
+    postfix.extend([html.h3("Adding postfix message")])
+
+
 
 @pytest.hookimpl(hookwrapper=True)
 def pytest_runtest_makereport(item):
