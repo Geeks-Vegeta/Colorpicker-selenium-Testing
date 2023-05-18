@@ -39,7 +39,7 @@ jobs:
     
     - name: Run Tests 
       run: |
-         pytest -vs --html=index.html --self-contained-html --md-report
+         pytest --html=index.html --self-contained-html
 
     - name: Commit files
       run: |
