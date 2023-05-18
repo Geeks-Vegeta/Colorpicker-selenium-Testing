@@ -63,9 +63,8 @@ class TestBrowser():
             print("Color Pallete created successfully")
 
             assert res.status_code==201
-            time.sleep(5)
             browser.get(f"https://color-pickerio.netlify.app/color/{idx}")
-
+            time.sleep(5)
             requests.delete(f"https://colorhunt2.onrender.com/color/deletecolor/{idx}")
             print("Deleted Successfully")
         except Exception as e:
