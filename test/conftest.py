@@ -18,6 +18,7 @@ import time
 
 driver = None
 
+
 @pytest.hookimpl(optionalhook=True)
 def pytest_html_report_title(report):
     report.title = "Color Picker Application Selenium Testing 🚀"
